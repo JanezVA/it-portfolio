@@ -152,7 +152,7 @@ const fallbackData = {
                     "Specific Error Messages: Clear feedback if a song fails to load or play, instead of a generic failure",
             ],
             "github_url": "https://github.com/JanezVA/Cupids-Letters",
-            "live_url": "cupids-letters.vercel.app"
+            "live_url": "https://cupids-letters.vercel.app"
         },
         {
             "id": 3,
