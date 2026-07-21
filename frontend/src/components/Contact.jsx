@@ -63,7 +63,7 @@ export default function Contact({ about }) {
               <div className="contact-icon-wrapper">✉</div>
               <div className="contact-text">
                 <h4>Email</h4>
-                <p>janez.novak@example.com</p>
+                <p>janezveraac@gmail.com</p>
               </div>
             </div>
 
@@ -71,7 +71,7 @@ export default function Contact({ about }) {
               <div className="contact-icon-wrapper">📍</div>
               <div className="contact-text">
                 <h4>Location</h4>
-                <p>Ljubljana, Slovenia (Open to Remote)</p>
+                <p>Barangobong, Sta. Lucia, Ilocos Sur (Open to Relocation)</p>
               </div>
             </div>
 
@@ -79,7 +79,7 @@ export default function Contact({ about }) {
               <div className="contact-icon-wrapper">💼</div>
               <div className="contact-text">
                 <h4>Availability</h4>
-                <p>Open for full-time roles & internships</p>
+                <p>Open for full-time roles</p>
               </div>
             </div>
           </div>

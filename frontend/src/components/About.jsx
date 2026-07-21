@@ -9,7 +9,7 @@ export default function About({ about }) {
         {/* Left Side: Bio Card */}
         <div className="glass-panel about-bio">
           <p>{about.bio}</p>
-          <p>I focus on constructing robust APIs, managing database integrity, and designing interactive frontends that result in a polished, fluid digital product.</p>
+          <p>[wait]</p>
           
           <div className="social-links">
             {about.socials?.github && (
@@ -53,21 +53,21 @@ export default function About({ about }) {
             </div>
           )}
 
-          {about.experience && about.experience.length > 0 && (
+          {about.certifications && about.certifications.length > 0 && (
             <div style={{ marginTop: '2rem' }}>
               <h3 className="timeline-title">
-                <span>💼</span> Experience
+                <span>�</span> Certifications
               </h3>
               <div className="timeline">
-                {about.experience.map((exp, idx) => (
+                {about.certifications.map((cert, idx) => (
                   <div key={idx} className="timeline-item glass-panel" style={{ padding: '1.5rem', marginBottom: '1rem' }}>
                     <div className="timeline-dot"></div>
                     <div className="timeline-header">
-                      <h4>{exp.role}</h4>
-                      <span className="timeline-period">{exp.period}</span>
+                      <h4>{cert.name}</h4>
+                      <span className="timeline-period">{cert.period}</span>
                     </div>
-                    <p className="timeline-sub">{exp.company}</p>
-                    <p className="timeline-desc">{exp.details}</p>
+                    <p className="timeline-sub">{cert.institution}</p>
+                    <p className="timeline-desc">{cert.details}</p>
                   </div>
                 ))}
               </div>
