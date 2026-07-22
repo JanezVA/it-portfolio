@@ -63,7 +63,7 @@ export default function Contact({ about }) {
               <div className="contact-icon-wrapper">✉</div>
               <div className="contact-text">
                 <h4>Email</h4>
-                <p>janezveraac@gmail.com</p>
+                <p>{about?.socials?.email || 'Not provided'}</p>
               </div>
             </div>
 
@@ -71,7 +71,7 @@ export default function Contact({ about }) {
               <div className="contact-icon-wrapper">📍</div>
               <div className="contact-text">
                 <h4>Location</h4>
-                <p>Barangobong, Sta. Lucia, Ilocos Sur (Open to Relocation)</p>
+                <p>Baguio City, Philippines (Open to Remote)</p>
               </div>
             </div>
 
@@ -79,7 +79,7 @@ export default function Contact({ about }) {
               <div className="contact-icon-wrapper">💼</div>
               <div className="contact-text">
                 <h4>Availability</h4>
-                <p>Open for full-time roles</p>
+                <p>Open for full-time roles & internships</p>
               </div>
             </div>
           </div>

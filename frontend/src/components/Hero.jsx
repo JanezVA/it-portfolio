@@ -5,13 +5,13 @@ export default function Hero({ about }) {
     <section id="home" className="hero">
       <div className="hero-tag">Welcome to my space</div>
       <h1 className="hero-title">
-        Hi, I'm <span>{about.name || "Janez Vera P. Acosta"}</span>
+        Hi, I'm <span>{about.name || "Janez Novak"}</span>
       </h1>
       <h2 className="hero-subtitle">
-        {about.title || "Information Technology Graduate"}
+        {about.title || "IT & Software Engineering Graduate"}
       </h2>
       <p className="hero-subtitle" style={{ fontSize: '1.1rem', marginTop: '-1rem' }}>
-        {about.tagline || "[wait"}
+        {about.tagline || "Building scalable backend services and responsive user experiences."}
       </p>
       
       <div className="hero-buttons">

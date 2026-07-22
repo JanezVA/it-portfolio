@@ -4,7 +4,7 @@ export default function Projects({ projects }) {
   const [filter, setFilter] = useState('All');
 
   // Extract unique technologies to filter by
-  const filters = ['All', '[]', '[]', '[]'];
+  const filters = ['All', 'Python', 'React.js', 'FastAPI'];
 
   const filteredProjects = filter === 'All'
     ? projects

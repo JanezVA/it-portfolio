@@ -9,7 +9,7 @@ export default function About({ about }) {
         {/* Left Side: Bio Card */}
         <div className="glass-panel about-bio">
           <p>{about.bio}</p>
-          <p>[wait]</p>
+          <p>I focus on constructing robust APIs, managing database integrity, and designing interactive frontends that result in a polished, fluid digital product.</p>
           
           <div className="social-links">
             {about.socials?.github && (
@@ -45,8 +45,31 @@ export default function About({ about }) {
                       <h4>{edu.degree}</h4>
                       <span className="timeline-period">{edu.period}</span>
                     </div>
-                    <p className="timeline-sub">{edu.institution} — GPA: {edu.gpa}</p>
+                    <p className="timeline-sub">
+                      {edu.institution}{edu.gpa ? ` — GPA: ${edu.gpa}` : ''}
+                    </p>
                     <p className="timeline-desc">{edu.details}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {about.experience && about.experience.length > 0 && (
+            <div style={{ marginTop: '2rem' }}>
+              <h3 className="timeline-title">
+                <span>💼</span> Experience
+              </h3>
+              <div className="timeline">
+                {about.experience.map((exp, idx) => (
+                  <div key={idx} className="timeline-item glass-panel" style={{ padding: '1.5rem', marginBottom: '1rem' }}>
+                    <div className="timeline-dot"></div>
+                    <div className="timeline-header">
+                      <h4>{exp.role}</h4>
+                      <span className="timeline-period">{exp.period}</span>
+                    </div>
+                    <p className="timeline-sub">{exp.company}</p>
+                    <p className="timeline-desc">{exp.details}</p>
                   </div>
                 ))}
               </div>
@@ -56,18 +79,28 @@ export default function About({ about }) {
           {about.certifications && about.certifications.length > 0 && (
             <div style={{ marginTop: '2rem' }}>
               <h3 className="timeline-title">
-                <span>�</span> Certifications
+                <span>📜</span> Certifications
               </h3>
               <div className="timeline">
                 {about.certifications.map((cert, idx) => (
                   <div key={idx} className="timeline-item glass-panel" style={{ padding: '1.5rem', marginBottom: '1rem' }}>
                     <div className="timeline-dot"></div>
                     <div className="timeline-header">
-                      <h4>{cert.name}</h4>
-                      <span className="timeline-period">{cert.period}</span>
+                      <h4>{cert.title}</h4>
+                      <span className="timeline-period">{cert.date}</span>
                     </div>
-                    <p className="timeline-sub">{cert.institution}</p>
-                    <p className="timeline-desc">{cert.details}</p>
+                    <p className="timeline-sub">{cert.issuer}</p>
+                    {cert.credential_url && cert.credential_url !== '#' && (
+                      <a
+                        href={cert.credential_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="timeline-desc"
+                        style={{ color: 'var(--color-primary)', textDecoration: 'none' }}
+                      >
+                        View credential →
+                      </a>
+                    )}
                   </div>
                 ))}
               </div>
