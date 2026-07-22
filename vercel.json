@@ -8,5 +8,6 @@
         "distDir": "dist"
       }
     }
-  ]
+  ],
+  "buildCommand": "npm --prefix frontend run build"
 }
